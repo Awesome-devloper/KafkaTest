@@ -6,19 +6,19 @@ namespace KafkaTest.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class WeatherForecastController : ControllerBase
+    public class KafkaController : ControllerBase
     {
        KafkaService _kafkaService;
 
-        private readonly ILogger<WeatherForecastController> _logger;
+        private readonly ILogger<KafkaController> _logger;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger, KafkaService kafkaService)
+        public KafkaController(ILogger<KafkaController> logger, KafkaService kafkaService)
         {
             _logger = logger;
             _kafkaService = kafkaService;
         }
 
-        [HttpGet(Name = "GetWeatherForecast")]
+        [HttpGet(Name = "SendDataToKafka")]
         public async  Task<IActionResult> Get()
         {
             var data = new KafkaMessage() { Text = "aref" ,MyProperty=DateTime.Now};
