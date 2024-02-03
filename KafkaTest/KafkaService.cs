@@ -1,4 +1,5 @@
-﻿using MassTransit;
+﻿using KafkaTest.Proto;
+using MassTransit;
 
 namespace KafkaTest
 {
@@ -14,6 +15,7 @@ namespace KafkaTest
                 producer.GetProducer<KafkaMessage>(new Uri("topic:algo"));
 
             await messageProducer.Produce(data);
+           
         }
     }
 }
