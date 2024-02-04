@@ -1,4 +1,5 @@
-﻿using KafkaTest.Proto;
+﻿using KafkaTest.Consumers;
+using KafkaTest.Proto;
 using MassTransit;
 
 namespace KafkaTest

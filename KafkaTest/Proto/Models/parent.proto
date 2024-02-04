@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+
+import "google/protobuf/timestamp.proto";
+import "customer.proto";
+import "ticker.proto";
+import "meta.proto";
+import "user.proto";
+
+message Parent {
+  int64 id = 1;
+  google.protobuf.Timestamp sent_datetime = 2;
+  Customer customer = 3;
+  Ticker ticker = 4;
+  User user = 5;
+  int32 side = 6;
+  string strategy = 7;
+  int32 state = 8;
+  float target_percent = 9;
+  int32 aggressiveness = 10;
+  int32 volume = 11;
+  float volume_done = 12;
+  int32 price = 13;
+  float value_done = 14;
+  bool queue_contribution = 15;
+  string trader = 16;
+  string description_code = 17;
+  Meta meta = 18;
+  float average_price = 19;
+}

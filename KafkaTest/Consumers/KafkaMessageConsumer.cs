@@ -1,7 +1,7 @@
 ﻿using MassTransit;
 using ProtoBuf;
 
-namespace KafkaTest
+namespace KafkaTest.Consumers
 {
     class KafkaMessageConsumer : IConsumer<KafkaMessage>
     {

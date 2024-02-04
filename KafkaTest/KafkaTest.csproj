@@ -14,8 +14,19 @@
     <PackageReference Include="MassTransit.ProtoBufMessageSerializer" Version="0.1.2" />
     <PackageReference Include="protobuf-net" Version="3.2.30" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
-	<PackageReference Include="protobuf-net.BuildTools" Version="3.0.86" PrivateAssets="all" IncludeAssets="runtime;build;native;contentfiles;analyzers;buildtransitive" />
-	<AdditionalFiles Include="Proto\person.proto" />
+	  <PackageReference Include="protobuf-net.BuildTools" Version="3.2.33">
+		  <PrivateAssets>all</PrivateAssets>
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	  </PackageReference>
   </ItemGroup>
-
+	<ItemGroup>
+		<AdditionalFiles Include="Proto\person.proto" />
+		
+		
+		<AdditionalFiles Include="Proto\Models\customer.proto" />
+		<AdditionalFiles Include="Proto\Models\meta.proto" />
+		<AdditionalFiles Include="Proto\Models\ticker.proto" />
+		<AdditionalFiles Include="Proto\Models\user.proto" />
+		<AdditionalFiles Include="Proto\Models\parent.proto" ImportPaths="../../" />
+	</ItemGroup>                  
 </Project>

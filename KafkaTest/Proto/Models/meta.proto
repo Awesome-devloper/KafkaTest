@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+package ems.protobuf;
+
+message Meta {
+  bool ignore_defaults = 1;
+}

@@ -1,3 +1,4 @@
+using KafkaTest.Consumers;
 using MassTransit;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ActionConstraints;
