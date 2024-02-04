@@ -29,7 +29,7 @@ builder.Services.AddMassTransit(x =>
         {
             //MassTransit.KafkaIntegration.Serializers.IKafkaSerializerFactory
 
-            cfg.Host(new[] {  });
+            cfg.Host(new[] { "","" });
 
             cfg.TopicEndpoint<Parent>("algo", "algo-group-name", e =>
             {
